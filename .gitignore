@@ -1,0 +1,11 @@
+
+*.pyc
+*.sqlite
+*.exe
+*.bak
+*.zip
+databases/*
+sessions/*
+errors/*
+cache/*
+.vscode/*

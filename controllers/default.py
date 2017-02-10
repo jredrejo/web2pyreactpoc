@@ -11,7 +11,7 @@
 
 def index():
     title = "Testing react with web2py"
-    props = {}
+    props = {'users': [{'username': 'bob'}, {'username': 'alice'}]}
     component = "testindex.js"
 
     return dict(title=title, props=props, component=component)

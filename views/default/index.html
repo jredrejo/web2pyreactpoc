@@ -14,7 +14,7 @@
   window.props = {{ =props}};
   window.react_mount = document.getElementById('react');
 </script>
-<script src="/static/src/{{=component}}"></script>
+<script src="{{=URL('static','src')}}/{{=component}}"></script>
 {{block right_sidebar}}
 <div class="panel panel-info">
   <div class="panel-heading">

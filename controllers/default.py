@@ -12,7 +12,7 @@
 def index():
     title = "Testing react with web2py"
     props = {}
-    component = ""
+    component = "testindex.js"
 
     return dict(title=title, props=props, component=component)
 

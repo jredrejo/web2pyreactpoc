@@ -11,10 +11,15 @@
   <i class="pending">Loading components...</i><br><br>
 </div>
 <script>
-  window.props = {{ =props}};
+  window.props = {{ =XML(props)}};
   window.react_mount = document.getElementById('react');
 </script>
-<script src="{{=URL('static','src')}}/{{=component}}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+
+<script src="{{=URL('static','src')}}/{{=component}}" type="text/babel"></script>
 {{block right_sidebar}}
 <div class="panel panel-info">
   <div class="panel-heading">

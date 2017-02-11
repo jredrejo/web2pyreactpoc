@@ -7,7 +7,7 @@ const Leaderboard = function({users}) {
                     <h1>Featured Players</h1>
                     <ul>
                     {users.map(user =>
-                        <li><a href={`/user/${user.username}/`}>
+                        <li key={user.username}><a href={`/user/${user.username}/`}>
                             {user.username}
                         </a></li>)}
                      </ul>

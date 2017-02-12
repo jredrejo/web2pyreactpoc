@@ -12,9 +12,16 @@
 def index():
     title = "Testing react with web2py"
     props = {"users": [{"username": "bob"}, {"username": "alice"}]}
-    component = "testindex.js"
+    component = "packindex.js"
 
     return dict(title=title, props=props, component=component)
+
+def simpleindex():
+    title = "Testing react with web2py not using webpack, simple js includes"
+    props = {"users": [{"username": "bob"}, {"username": "alice"}]}
+    component = "testindex.js"
+
+    return dict(title=title, props=props, component=component)    
 
 
 def user():

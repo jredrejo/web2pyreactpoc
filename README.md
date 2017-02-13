@@ -8,6 +8,12 @@ Installing
 ==========
 Copy this repository into the applications folder of a web2py installation.
 
+To run the webpack example webpack and npm must be installed in the system. Then, from the static/src folder, npm install & webpack must be run
 
+Demoing
+==========
+
+* __Simple__ page is the simplest possible example, not using webpack, converting jsx code on the fly.
+* __Index__ page does the same the simple page, but using webpack, which is the usual way to work with these kind of technologies.
 
 

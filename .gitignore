@@ -1,5 +1,6 @@
-
 *.pyc
+static/src/node_modules
+static/src/dist
 *.sqlite
 *.exe
 *.bak
@@ -9,3 +10,4 @@ sessions/*
 errors/*
 cache/*
 .vscode/*
+

@@ -1,6 +1,3 @@
-
-
-
 const Leaderboard = function({users}) {
           return (
                 <div>

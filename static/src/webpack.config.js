@@ -2,10 +2,16 @@
 var path = require('path');
 
 module.exports = {
-    entry: './app/testindex.jsx',
+    entry: {
+        pageSimple: './app/testindex.jsx',
+        pageAdvanced: './app/advanced.jsx'
+    },
+
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: 'packindex.js'
+        filename: '[name].js',
+
+
     },
 
     module: {

@@ -29,6 +29,7 @@
 'Administrative interface': 'Interfaz administrativa',
 'Administrative Interface': 'Interfaz Administrativa',
 'Administrator Password:': 'Contraseña del Administrador:',
+'Advanced': 'Advanced',
 'Ajax Recipes': 'Recetas AJAX',
 'An error occured, please %s the page': 'Ha ocurrido un error, por favor %s la página',
 'And': 'Y',

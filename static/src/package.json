@@ -4,20 +4,35 @@
   "description": "Use test of webpack and react with web2py",
   "main": "packindex.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "lint": "eslint js/**/*.js server.js",
+    "watch": "webpack --watch"
   },
   "author": "José L. Redrejo Rodríguez",
   "license": "GPL-3.0",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-bootstrap-table": "^2.11.2",
-    "react-dom": "^15.4.2"
+    "react": "^15.5.4",
+    "react-bootstrap-table": "^3.3.3",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "babel-core": "^6.22.1",
-    "babel-loader": "^6.2.10",
-    "babel-preset-es2015": "^6.22.0l",
-    "babel-preset-react": "^6.22.0",
-    "webpack": "^2.2.1"
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-jsx": "^4.0.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

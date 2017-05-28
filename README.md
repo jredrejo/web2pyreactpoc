@@ -16,4 +16,4 @@ Demoing
 * __Simple__ page is the simplest possible example, not using webpack, converting jsx code on the fly.
 * __Index__ page does the same the simple page, but using webpack, which is the usual way to work with these kind of technologies.
 * __Advanced__ page using an external react component, [react-bootstrap-table](http://allenfang.github.io/react-bootstrap-table/)
-
+* __Forms__ page using a state store and [redux-form](http://redux-form.com)

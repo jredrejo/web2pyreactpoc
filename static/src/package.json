@@ -6,16 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --watch",
     "lint": "eslint js/**/*.js server.js",
     "watch": "webpack --watch"
   },
   "author": "José L. Redrejo Rodríguez",
   "license": "GPL-3.0",
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
-    "react-bootstrap-table": "^3.3.3",
-    "react-dom": "^15.5.4"
+    "react-bootstrap-table": "^3.3.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "redux-form": "^6.7.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

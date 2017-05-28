@@ -1,18 +1,17 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
-    entry: {
-        pageSimple: './app/testindex.js',
-        pageAdvanced: './app/advanced.js'
-    },
+  entry: {
+    pageSimple: './app/testindex.js',
+    pageAdvanced: './app/advanced.js',
+    advancedForm: './app/advancedForm.js'
+  },
 
-    output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: '[name].js',
-
-
-    },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js'
+  },
   devtool: 'cheap-module-source-map',
   stats: {
     colors: true,
@@ -23,13 +22,13 @@ module.exports = {
     publicPath: '/public/',
     historyApiFallback: true
   },
-    module: {
+  module: {
 
-        rules: [
-                  {
-        enforce: "pre",
+    rules: [
+      {
+        enforce: 'pre',
         test: /\.js$/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         exclude: /node_modules/
       },
       {
@@ -44,43 +43,41 @@ module.exports = {
           }
         ]
       },
-            {
-                test: /\.jsx?$/,
-                include: [
-                    path.resolve(__dirname, "app"),
+      {
+        test: /\.jsx?$/,
+        include: [
+          path.resolve(__dirname, 'app'),
           path.resolve('js'),
-          path.resolve('node_modules/preact-compat/src')                    
-                ],
-
-
-                loader: "babel-loader",
-                options: {
-                    presets: ["react", "es2015"]
-                },
-                exclude: [
-                    path.resolve(__dirname, "app/components"), path.resolve(__dirname, "node_modules")
-                ]
-            },
-
+          path.resolve('node_modules/preact-compat/src')
         ],
 
-    },
+        loader: 'babel-loader',
+        options: {
+          presets: ['react', 'es2015']
+        },
+        exclude: [
+          path.resolve(__dirname, 'app/components'), path.resolve(__dirname, 'node_modules')
+        ]
+      }
 
-    resolve: {
-
-        modules: [
-            "node_modules",
-            path.resolve(__dirname, "node_modules")
-        ],
-
-        extensions: [".js", ".json", ".jsx", ".css"],
-
-
-    },
-    plugins: [
-        new webpack.LoaderOptionsPlugin({
-            debug: true
-        })
     ]
 
-};
+  },
+
+  resolve: {
+
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'node_modules')
+    ],
+
+    extensions: ['.js', '.json', '.jsx', '.css']
+
+  },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      debug: true
+    })
+  ]
+
+}

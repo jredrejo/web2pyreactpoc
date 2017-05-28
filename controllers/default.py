@@ -27,10 +27,17 @@ def simpleindex():
 
 def advanced():
     title = "Using a big component"
-    props = {"products":[{'id': 1, 'name': "Apples",'price': 1.20 },
-                        {'id': 2, 'name': "Pears", 'price': 1.80 }]}    
+    props = {"products":[{'id': 1, 'name': "Apples", 'price': 1.20},
+                        {'id': 2, 'name': "Pears", 'price': 1.80}]}
     component = "pageAdvanced.js"
 
+    return dict(title=title, props=props, component=component)
+
+
+def reduxforms():
+    title = "using redux-forms"
+    props = {}
+    component="advancedForm.js"
     return dict(title=title, props=props, component=component)
 
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
 const Leaderboard = function ({users}) {
   return (
@@ -14,8 +15,7 @@ const Leaderboard = function ({users}) {
     </div>
   )
 }
-Leaderboard.propTypes = {users: React.PropTypes.string}
-
+Leaderboard.propTypes = {users: PropTypes.array}
 ReactDOM.render(
     React.createElement(Leaderboard, window.props),    // gets the props that are passed in the template
     window.react_mount                                // a reference to the #react div that we render to

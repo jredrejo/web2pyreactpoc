@@ -1,3 +1,4 @@
+// Code based on https://codesandbox.io/s/mZRjw05yp
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Field, reduxForm } from 'redux-form'

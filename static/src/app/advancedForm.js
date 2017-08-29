@@ -5,13 +5,11 @@ import { Provider } from 'react-redux'
 import store from './store'
 
 class PageForm extends React.Component {
-  submit (values) {
+  submit(values) {
     console.log(values)
   }
-  render () {
-    return (
-      <SimpleForm onSubmit={this.submit} />
-    )
+  render() {
+    return <SimpleForm onSubmit={this.submit} />
   }
 }
 

@@ -1,3 +1,9 @@
 {
-  "extends": ["standard", "standard-react"]
+  "extends": ["standard", "standard-react", "prettier"],
+
+  "rules": {
+    "react/jsx-quotes": 0,
+    "jsx-quotes": [2, "prefer-double"],
+    "space-before-function-paren": ["error", "never"]
+  }
 }

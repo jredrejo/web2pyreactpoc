@@ -11,4 +11,5 @@ sessions/*
 errors/*
 cache/*
 .vscode/*
+static/src/package-lock.json
 

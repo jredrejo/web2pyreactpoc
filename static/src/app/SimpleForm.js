@@ -1,7 +1,7 @@
 // Code based on https://codesandbox.io/s/mZRjw05yp
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Field, reduxForm } from 'redux-form'
+import React from "react"
+import PropTypes from "prop-types"
+import { Field, reduxForm } from "redux-form"
 const SimpleForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props
   return (
@@ -76,5 +76,5 @@ SimpleForm.propTypes = {
   submitting: PropTypes.bool
 }
 export default reduxForm({
-  form: 'simple' // a unique identifier for this form
+  form: "simple" // a unique identifier for this form
 })(SimpleForm)

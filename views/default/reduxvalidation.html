@@ -1,0 +1,21 @@
+{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}} {{extend 'layout.html'}} {{block header}}
+
+</link>
+<header class="container-fluid background">
+  <div class="jumbotron text-center">
+    <h1>{{=title}}</h1>
+  </div>
+</header>
+{{end}}
+<div id="react">
+  <!-- Contents get replaced by mounted React.Component -->
+  <i class="fa fa-lg fa-spinner fa-spin"></i><br><br>
+  <i class="pending">Loading components...</i><br><br>
+</div>
+<script>
+  window.props = {{ =XML(props) }};
+  window.react_mount = document.getElementById('react');
+
+</script>
+
+<script src="{{=URL('static','src/dist')}}/{{=component}}"></script>

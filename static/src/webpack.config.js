@@ -5,7 +5,8 @@ module.exports = {
   entry: {
     pageSimple: './app/testindex.js',
     pageAdvanced: './app/advanced.js',
-    advancedForm: './app/advancedForm.js'
+    advancedForm: './app/advancedForm.js',
+    validatingForm: './app/validatingForm.js'
   },
 
   output: {
@@ -23,7 +24,6 @@ module.exports = {
     historyApiFallback: true
   },
   module: {
-
     rules: [
       {
         enforce: 'pre',
@@ -45,39 +45,25 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, 'app'),
-          path.resolve('js'),
-          path.resolve('node_modules/preact-compat/src')
-        ],
+        include: [path.resolve(__dirname, 'app'), path.resolve('js'), path.resolve('node_modules/preact-compat/src')],
 
         loader: 'babel-loader',
         options: {
           presets: ['react', 'es2015']
         },
-        exclude: [
-          path.resolve(__dirname, 'app/components'), path.resolve(__dirname, 'node_modules')
-        ]
+        exclude: [path.resolve(__dirname, 'app/components'), path.resolve(__dirname, 'node_modules')]
       }
-
     ]
-
   },
 
   resolve: {
-
-    modules: [
-      'node_modules',
-      path.resolve(__dirname, 'node_modules')
-    ],
+    modules: ['node_modules', path.resolve(__dirname, 'node_modules')],
 
     extensions: ['.js', '.json', '.jsx', '.css']
-
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
       debug: true
     })
   ]
-
 }

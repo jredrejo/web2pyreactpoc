@@ -8,6 +8,7 @@ class PageForm extends React.Component {
   submit(values) {
     console.log(values)
   }
+
   render() {
     // return <SimpleForm onSubmit={this.submit} />
     return <SimpleForm onSubmit={showResults} />

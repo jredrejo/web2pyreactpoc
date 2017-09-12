@@ -32,8 +32,6 @@ response.menu = [
     (T('Home'), False, URL('default', 'index'), []),
     ('Simple', False, URL('default', 'simpleindex'), []),
     (T('Advanced'), False, URL('default', 'advanced'), []),
-    (T('Forms'), False, URL('default', 'reduxforms'), [])
+    (T('Forms'), False, URL('default', 'reduxforms'), []),
+    (T('Validating Forms'), False, URL('default', 'reduxvalidation'), [])
 ]
-
-
-

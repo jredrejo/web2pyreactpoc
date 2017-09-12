@@ -4,6 +4,7 @@
   "rules": {
     "react/jsx-quotes": 0,
     "jsx-quotes": [2, "prefer-double"],
-    "space-before-function-paren": ["error", "never"]
+    "space-before-function-paren": ["error", "never"],
+    "prefer-promise-reject-errors": ["error", {"allowEmptyReject": true}]    
   }
 }

@@ -27,8 +27,8 @@ def simpleindex():
 
 def advanced():
     title = "Using a big component"
-    props = {"products":[{'id': 1, 'name': "Apples", 'price': 1.20},
-                        {'id': 2, 'name': "Pears", 'price': 1.80}]}
+    props = {"products": [{'id': 1, 'name': "Apples", 'price': 1.20},
+                          {'id': 2, 'name': "Pears", 'price': 1.80}]}
     component = "pageAdvanced.js"
 
     return dict(title=title, props=props, component=component)
@@ -37,8 +37,27 @@ def advanced():
 def reduxforms():
     title = "using redux-forms"
     props = {}
-    component="advancedForm.js"
+    component = "advancedForm.js"
     return dict(title=title, props=props, component=component)
+
+
+def reduxvalidation():
+    title = "using redux-forms with backend validation"
+
+    form = SQLFORM.factory(
+        Field('firstName', requires=IS_NOT_EMPTY()),
+        Field('lastName'),
+        Field('email', requires=IS_EMAIL()),
+        Field('sex', requires=IS_IN_SET(('male', 'female'))),
+        Field('favoriteColor', requires=IS_IN_SET(
+            ('ff0000', '00ff00', '0000ff'))),
+        Field('employed', 'boolean'),
+        Field('Notes', 'text'))
+    form.validate()
+    component = "validatingForm.js"
+    props = {'formname': form.formname, 'formkey': form.formkey}
+
+    return dict(title=title, props=props, component=component, errors=form.errors)
 
 
 def user():
